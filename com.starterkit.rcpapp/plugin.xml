@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.starterkit.rcpapp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="com.starterkit.rcpapp.Perspective"
+            id="com.starterkit.rcpapp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.starterkit.rcpapp.application"
+            name="rcpapp.product">
+         <property
+               name="appName"
+               value="rcpapp.product">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/alt_launcher_256.gif">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.starterkit.rcpapp.application"
+            name="rcpapp.product">
+      </product>
+   </extension>
+
+</plugin>

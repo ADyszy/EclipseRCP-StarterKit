@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.starterkit.view">
+      </category>
+      <view
+            name="Sample View"
+            icon="icons/sample.gif"
+            category="com.starterkit.view"
+            class="com.starterkit.view.views.SampleView"
+            id="com.starterkit.view.views.SampleView">
+      </view>
+      <view
+            class="com.starterkit.view.ViewPart1"
+            id="com.starterkit.view.view1"
+            name="a New View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.starterkit.view.views.SampleView">
+         <view
+               id="com.starterkit.view.views.SampleView"
+               minimized="false"
+               ratio="0.8"
+               relationship="left"
+               relative="com.starterkit.view.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.starterkit.view.testPerspectiveFactory"
+            id="com.starterkit.view.testPerspective"
+            name="testPerspective">
+      </perspective>
+   </extension>
+
+</plugin>
